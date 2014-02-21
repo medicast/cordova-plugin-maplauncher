@@ -13,12 +13,14 @@
 - (void) launch: (CDVInvokedUrlCommand*)command
 {
 	NSString* address = [command.arguments objectAtIndex:0];
+    NSString* source = [command.arguments objectAtIndex:1];
+    NSString* callbackUrl = [command.arguments objectAtIndex:2];
 
     NSURL *testURL = [NSURL URLWithString:@"comgooglemaps-x-callback://"];
     NSString *directionsRequest;
     if ([[UIApplication sharedApplication] canOpenURL:testURL]) {
         directionsRequest =
-        [NSString stringWithFormat:@"comgooglemaps-x-callback:////x-callback-url/open/?url=daddr=%@&x-success=medicast://&x-source=Medicast", address];
+        [NSString stringWithFormat:@"comgooglemaps-x-callback:////x-callback-url/open/?url=daddr=%@&x-success=%@&x-source=%@", address, callbackUrl, source];
     } else {
         NSLog(@"Can't use Google Maps on this device.");
         directionsRequest =
