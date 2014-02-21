@@ -8,7 +8,7 @@
 	<name>Map Launcher Plugin</name>
 	<description>Medicast Map Launcher</description>
 	<author>Nafis Zebarjadi</author>
-	<license>Apache 2.0 License</license>
+	<license>MIT License</license>
 	<js-module src="www/MapLauncher.js" name="MapLauncher">
 		<clobbers target="MapLauncher" />
 	</js-module>
