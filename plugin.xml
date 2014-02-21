@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="co.medicast.plugins.MapLauncher"
+    version="0.1.0">
+	<engines>
+	    <engine name="cordova" version=">=3.0.0" />
+	</engines>
+	<name>Map Launcher Plugin</name>
+	<description>Medicast Map Launcher</description>
+	<author>Nafis Zebarjadi</author>
+	<license>Apache 2.0 License</license>
+	<js-module src="www/MapLauncher.js" name="MapLauncher">
+		<clobbers target="MapLauncher" />
+	</js-module>
+
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="MapLauncher">
+		    	<param name="ios-package" value="MapLauncherPlugin" />
+		    	<param name="onload" value="true"/>
+		 	</feature>
+		</config-file>
+
+		<header-file src="src/ios/MapLauncherPlugin.h" />
+		<source-file src="src/ios/MapLauncherPlugin.m" />
+	</platform>
+</plugin>
