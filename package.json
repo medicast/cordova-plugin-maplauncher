@@ -1,11 +1,11 @@
 {
-    "version": "0.1.0",
+    "version": "1.0.0",
     "name": "co.medicast.plugins.MapLauncher",
     "cordova_name": "MapLauncher",
     "description": "Medicast Map Launcher Plugin",
-    "license": "Apache 2.0",
+    "license": "MIT",
     "keywords": [
-        "maps"
+        "maps", "google maps", "apple maps", "navigation"
     ],
     "engines": []
 }
