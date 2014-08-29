@@ -3,6 +3,7 @@
 //  Medicast
 //
 //  Created by Nafis Zebarjadi on 2/20/14.
+//  Last updated 8/29/2014
 //
 //
 
@@ -12,7 +13,7 @@
 
 - (void) launch: (CDVInvokedUrlCommand*)command
 {
-	NSString* address = [command.arguments objectAtIndex:0];
+    NSString* address = [command.arguments objectAtIndex:0];
     NSString* source = [command.arguments objectAtIndex:1];
     NSString* callbackUrl = [command.arguments objectAtIndex:2];
 
@@ -20,7 +21,7 @@
     NSString *directionsRequest;
     if ([[UIApplication sharedApplication] canOpenURL:testURL]) {
         directionsRequest =
-        [NSString stringWithFormat:@"comgooglemaps-x-callback:////x-callback-url/open/?url=daddr=%@&x-success=%@&x-source=%@", address, callbackUrl, source];
+        [NSString stringWithFormat:@"comgooglemaps-x-callback://?daddr=%@&directionsmode=driving&x-success=%@&x-source=%@", address, callbackUrl, source];
     } else {
         NSLog(@"Can't use Google Maps on this device.");
         directionsRequest =
