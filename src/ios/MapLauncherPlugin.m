@@ -11,7 +11,18 @@
 
 @implementation MapLauncherPlugin
 
-- (void) launch: (CDVInvokedUrlCommand*)command
+- (void) getGoogleMapsAccess: (CDVInvokedUrlCommand*)command
+{
+    NSURL *testURL = [NSURL URLWithString:@"comgooglemaps-x-callback://"];
+    CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:NO];
+    if ([[UIApplication sharedApplication] canOpenURL:testURL]) {
+        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:YES];
+    }
+
+    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+}
+
+- (void) launchGoogleMap: (CDVInvokedUrlCommand*)command
 {
     NSString* address = [command.arguments objectAtIndex:0];
     NSString* source = [command.arguments objectAtIndex:1];
@@ -31,7 +42,7 @@
     NSURL *directionsURL = [NSURL URLWithString:safeString];
 
     [[UIApplication sharedApplication] openURL:directionsURL];
-    
+
 }
 
 @end

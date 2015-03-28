@@ -13,10 +13,11 @@
 #import <Cordova/CDV.h>
 
 @interface MapLauncherPlugin : CDVPlugin {
-    
+
 }
 
-- (void) launch: (CDVInvokedUrlCommand*)command;
+- (void) getGoogleMapsAccess: (CDVInvokedUrlCommand*)command;
+- (void) launchGoogleMap: (CDVInvokedUrlCommand*)command;
 
 @end
 
