@@ -15,15 +15,21 @@ At the moment, the address or coordinates you provide will be used to set the de
 To launch Google Maps from your Cordova code:
 
 ```
-	MapLauncher.launchMap("123 Main Street, Anytown USA");
+	MapLauncher.launchGoogleMap("123 Main Street, Anytown USA");
 
 ```
 
 You can also specify a source name and URL scheme if you want Google Maps to display a "Return to Foo App" bar at the top of the app:
 
 ```
-	MapLauncher.launchMap('123 Main Street, Anytown USA', 'Foo App', 'fooapp://?dosomething');
+	MapLauncher.launchGoogleMap('123 Main Street, Anytown USA', 'Foo App', 'fooapp://?dosomething');
 
+```
+
+You can check from js is google maps is supported before proceeding to launch strictly in Google Maps
+
+```
+	MapLauncher.hasGoogleMaps
 ```
 
 For more on how this works, check out [https://developers.google.com/maps/documentation/ios/urlscheme#specify_a_callback_url].
