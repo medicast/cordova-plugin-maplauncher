@@ -17,6 +17,9 @@
 }
 
 - (void) launch: (CDVInvokedUrlCommand*)command;
+- (void) launchGoogleMaps: (CDVInvokedUrlCommand*)command;
+- (void) launchAppleMaps: (CDVInvokedUrlCommand*)command;
+- (void) hasGoogleMaps: (CDVInvokedUrlCommand*)command;
 
 @end
 
