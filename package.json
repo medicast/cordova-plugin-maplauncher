@@ -1,11 +1,17 @@
 {
-    "version": "1.0.0",
-    "name": "co.medicast.plugins.MapLauncher",
-    "cordova_name": "MapLauncher",
-    "description": "Medicast Map Launcher Plugin",
-    "license": "Apache 2.0",
-    "keywords": [
-        "maps"
+    "version": "2.0.0",
+    "name": "co.medicast.plugins.maplauncher",
+    "cordova_name": "Map Launcher Plugin",
+    "description": "Google Maps Launcher Plugin for iOS",
+    "license": "MIT License",
+    "platforms": [
+        "ios"
     ],
-    "engines": []
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ],
+    "englishdoc": "# co.medicast.plugins.MapLauncher\n\n## Installation\n\n    cordova plugin add co.medicast.plugins.MapLauncher\n\n"
 }
