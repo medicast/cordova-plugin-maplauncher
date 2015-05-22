@@ -6,7 +6,7 @@
 	    <engine name="cordova" version=">=3.0.0" />
 	</engines>
 	<name>Map Launcher Plugin</name>
-	<description>Medicast Map Launcher</description>
+	<description>Google Maps Launcher Plugin for iOS</description>
 	<author>Nafis Zebarjadi</author>
 	<license>MIT License</license>
 	<js-module src="www/MapLauncher.js" name="MapLauncher">

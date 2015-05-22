@@ -3,7 +3,8 @@
 //  Medicast
 //
 //  Created by Nafis Zebarjadi on 2/20/14.
-// 
+//  Last updated 5/21/2015
+//
 //
 
 #import "MapLauncherPlugin.h"
@@ -12,7 +13,7 @@
 
 - (void) launch: (CDVInvokedUrlCommand*)command
 {
-	NSString* address = [command.arguments objectAtIndex:0];
+    NSString* address = [command.arguments objectAtIndex:0];
     NSString* source = [command.arguments objectAtIndex:1];
     NSString* callbackUrl = [command.arguments objectAtIndex:2];
 
