@@ -1,17 +1,36 @@
 {
-    "version": "2.0.1",
-    "name": "co.medicast.plugins.maplauncher",
-    "cordova_name": "Map Launcher Plugin",
-    "description": "Google Maps Launcher Plugin for iOS",
-    "license": "MIT License",
+  "version": "2.0.1",
+  "name": "co.medicast.plugins.maplauncher",
+  "cordova_name": "Map Launcher Plugin",
+  "description": "Google Maps Launcher Plugin for iOS",
+  "license": "MIT License",
+  "platforms": [
+    "ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "englishdoc": "# co.medicast.plugins.MapLauncher\n\n## Installation\n\n    cordova plugin add co.medicast.plugins.MapLauncher\n\n",
+  "cordova": {
+    "id": "co.medicast.plugins.MapLauncher",
     "platforms": [
-        "ios"
-    ],
-    "engines": [
-        {
-            "name": "cordova",
-            "version": ">=3.0.0"
-        }
-    ],
-    "englishdoc": "# co.medicast.plugins.MapLauncher\n\n## Installation\n\n    cordova plugin add co.medicast.plugins.MapLauncher\n\n"
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/medicast/cordova-plugin-maplauncher.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Nafis Zebarjadi",
+  "bugs": {
+    "url": "https://github.com/medicast/cordova-plugin-maplauncher/issues"
+  },
+  "homepage": "https://github.com/medicast/cordova-plugin-maplauncher#readme"
 }
