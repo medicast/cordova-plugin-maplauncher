@@ -12,6 +12,17 @@ This Cordova/PhoneGap plugin lets you launch into Google Maps from your app for 
 
 At the moment, the address or coordinates you provide will be used to set the destination address for navigation purposes.  That's what I needed so that's what I built, but it's trivial to modify the iOS source to do a search or any other behavior that the Google Maps URL scheme supports (see [https://developers.google.com/maps/documentation/ios/urlscheme]).  Pull requests appreciated!
 
+### iOS 9 Security Restrictions
+
+iOS 9 introduces some additional security which will break your ability to launch Google Maps, *unless* you add the following configuration to your *-Info.plist file:
+
+```
+<array>
+    <string>comgooglemaps</string>
+    <string>comgooglemaps-x-callback</string>
+</array>
+```
+
 ### Launch best map available
 
 The ```launch``` method will first try to use Google Maps, then fallback to Apple Maps:
